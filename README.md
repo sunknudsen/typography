@@ -55,7 +55,7 @@ A comma joining clauses after a parenthetical is reported like an Oxford comma. 
 $ git config core.hooksPath .githooks
 ```
 
-The hook runs the format check, typecheck, lint and tests before each commit. Source and tests are TypeScript that Node runs directly, so none of them needs a build.
+The hook runs the format check, typecheck and tests before each commit. Source and tests are TypeScript that Node runs directly, so none of them needs a build.
 
 ## Release
 
