@@ -59,7 +59,7 @@ The hook runs the format check, typecheck, lint and tests before each commit. So
 
 ## Release
 
-> Heads-up: `prepublishOnly` runs every check and the build before publishing, but npm skips lifecycle scripts when `ignore-scripts` is set… on such a host, pass `--ignore-scripts=false` so `dist/` is fresh and checked.
+> Heads-up: `prepublishOnly` runs every check and the build before publishing, but npm skips lifecycle scripts when `ignore-scripts` is set… on such a host, pass `--ignore-scripts=false` so `dist/` is fresh and checked. A scoped package is restricted by default on its first publish, so `publishConfig` in package.json sets access to public.
 
 ```console
 $ npm version minor
