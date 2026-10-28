@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# Check the repository before committing: formatting, types, lint and tests.
+#
+# Registered with “git config core.hooksPath .githooks”, which “npm install”
+# runs through the prepare script in package.json unless npm is configured to
+# ignore scripts.
+
+set -o errexit
+set -o nounset
+
+npm run format:check
+npm run typecheck
+npm run lint
+npm test

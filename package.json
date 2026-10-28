@@ -1,0 +1,65 @@
+{
+  "name": "@sunknudsen/typography",
+  "version": "1.0.0",
+  "description": "Typography rules for user-facing copy, as a pure module and an ESLint plugin",
+  "license": "MIT",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "punctuation",
+    "typography"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunknudsen/typography.git"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/core.d.ts",
+      "default": "./dist/core.js"
+    },
+    "./eslint": {
+      "types": "./dist/eslint.d.ts",
+      "default": "./dist/eslint.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc --project tsconfig.build.json",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint",
+    "prepare": "git config core.hooksPath .githooks",
+    "prepublishOnly": "npm run format:check && npm run typecheck && npm run lint && npm test && npm run build",
+    "test": "node --test tests/*.test.ts",
+    "typecheck": "tsc"
+  },
+  "peerDependencies": {
+    "eslint": ">=9.10.0"
+  },
+  "peerDependenciesMeta": {
+    "eslint": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.4",
+    "eslint": "^9.39.5",
+    "prettier": "^3.9.10",
+    "typescript": "^5.9.3"
+  },
+  "prettier": {
+    "endOfLine": "lf",
+    "printWidth": 80,
+    "semi": false,
+    "tabWidth": 2,
+    "trailingComma": "es5"
+  }
+}
