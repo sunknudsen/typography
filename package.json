@@ -1,6 +1,6 @@
 {
   "name": "@sunknudsen/typography",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Typography rules for user-facing copy, as a pure module and an ESLint plugin",
   "license": "MIT",
   "keywords": [
